@@ -35,12 +35,13 @@ const tweetsArray = [
 ];
 
 function App() {
-  return <div className="App">
-    <Tweet tweet={ tweetsArray[0] }></Tweet>
-    <Tweet tweet={ tweetsArray[1] }></Tweet>
-    <Tweet tweet={ tweetsArray[2] }></Tweet>
-
-  </div>;
+  return (
+    <div className="App">
+      {tweetsArray.map((tweet) => {
+        return <Tweet tweet={tweet} />;
+      })}
+    </div>
+  );
 }
 
 export default App;
